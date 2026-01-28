@@ -1,6 +1,6 @@
 {
-  "Group": "dev.hytalemodding",
-  "Name": "ExamplePlugin",
+  "Group": "dev.aoetest",
+  "Name": "AoETest",
   "Version": "${version}",
   "Description": "Description of your plugin",
   "Authors": [
@@ -16,5 +16,5 @@
   "OptionalDependencies": {},
   "DisabledByDefault": false,
   "IncludesAssetPack": false,
-  "Main": "dev.hytalemodding.ExamplePlugin"
+  "Main": "dev.aoetest.AoEPlugin"
 }
