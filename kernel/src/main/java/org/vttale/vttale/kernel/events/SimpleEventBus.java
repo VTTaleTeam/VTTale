@@ -14,19 +14,19 @@ public class SimpleEventBus implements EventBus {
 
     private final Map<Class<?>, List<BiConsumer<?, EventContext>>> subscribers = new ConcurrentHashMap<>();
 
+    /**
+     * Publishes event to subscribers; handles errors
+     */
     @Override
+    @SuppressWarnings("unchecked")
     public <T extends Event> void publish(T event, EventContext context) {
-        Class<?> eventType = event.getClass();
-
-        if (subscribers.containsKey(eventType)) {
-            for (var listener : subscribers.get(eventType)) {
-                @SuppressWarnings("unchecked")
-                BiConsumer<T, EventContext> typedListener = (BiConsumer<T, EventContext>) listener;
-
+        List<BiConsumer<?, EventContext>> eventListeners = subscribers.get(event.getClass());
+        if (eventListeners != null) {
+            for (BiConsumer<?, EventContext> listener : eventListeners) {
                 try {
-                    typedListener.accept(event, context);
+                    ((BiConsumer<T, EventContext>) listener).accept(event, context);
                 } catch (Exception e) {
-                    System.err.println("Errore nel listener per " + eventType.getName());
+                    // TODO: Proper error handling
                     e.printStackTrace();
                 }
             }

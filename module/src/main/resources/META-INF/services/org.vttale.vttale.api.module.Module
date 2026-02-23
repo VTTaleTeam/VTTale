@@ -1,2 +1,3 @@
 org.vttale.vttale.module.chat.ChatModule
 org.vttale.vttale.module.diceroll.DiceRollModule
+org.vttale.vttale.module.token.TokenModule
