@@ -4,7 +4,7 @@
 
 [![Java](https://img.shields.io/badge/Java-21-ED8B00?logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Gradle](https://img.shields.io/badge/Gradle-Multi--module-02303A?logo=gradle&logoColor=white)](https://gradle.org/)
-[![License](https://img.shields.io/badge/License-TBD-blue)](LICENSE)
+[![License](https://img.shields.io/badge/License-LGPL--3.0-blue)](COPYING.LESSER)
 
 ---
 
@@ -271,7 +271,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the [TBD License](LICENSE).
+This project is licensed under the [GNU Lesser General Public License v3.0](COPYING.LESSER).
 
 ---
 
